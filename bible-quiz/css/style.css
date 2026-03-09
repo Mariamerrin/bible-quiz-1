@@ -1,0 +1,33 @@
+body{
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    padding: 20px;
+}
+.quiz-box{
+    background: white;
+    padding: 25px;
+    max-width: 800px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+h1{ text-align: center; color: #333; }
+input[type="text"], input[type="tel"], textarea {
+    width: 95%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+button{
+    padding: 12px 25px;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+button:hover { background: #218838; }
+p { font-weight: bold; margin-top: 20px; }

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz Result</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="quiz-box" style="text-align: center;">
+        <h1>தேர்வு முடிவுகள்</h1>
+        <div id="res"></div>
+        <button onclick="window.print()">அச்சிடுக (Print Result)</button>
+        <button onclick="location.href='index.html'">மீண்டும் எழுத</button>
+    </div>
+    <script>
+        const user = JSON.parse(localStorage.getItem('quizUser'));
+        const score = localStorage.getItem('finalScore');
+        
+        document.getElementById('res').innerHTML = `
+            <p><strong>பெயர்:</strong> ${user.name}</p>
+            <p><strong>பங்கு:</strong> ${user.parish}</p>
+            <p><strong>மதிப்பெண்:</strong> <span style="font-size: 24px; color: green;">${score} / 30</span></p>
+        `;
+    </script>
+</body>
+</html>

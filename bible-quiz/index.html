@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+    <meta charset="UTF-8">
+    <title>Bible Quiz - Register</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="quiz-box">
+        <h1>பதிவு படிவம்</h1>
+        <form id="regForm">
+            <input type="text" id="name" placeholder="பெயர் (Name)" required><br>
+            <input type="text" id="parish" placeholder="பங்கு (Parish)" required><br>
+            <input type="text" id="district" placeholder="மாவட்டம் (District)" required><br>
+            <textarea id="address" placeholder="முகவரி (Address)" required></textarea><br>
+            <input type="tel" id="phone" placeholder="தொலைபேசி எண் (Phone)" required><br>
+            <button type="submit">தேர்வை தொடங்கு</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById('regForm').onsubmit = (e) => {
+            e.preventDefault();
+            const user = {
+                name: document.getElementById('name').value,
+                parish: document.getElementById('parish').value,
+                district: document.getElementById('district').value,
+                address: document.getElementById('address').value,
+                phone: document.getElementById('phone').value
+            };
+            localStorage.setItem('quizUser', JSON.stringify(user));
+            window.location.href = 'quiz.html';
+        };
+    </script>
+</body>
+</html>
